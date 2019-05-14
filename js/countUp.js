@@ -134,6 +134,20 @@ var CountUp = function(target, startVal, endVal, decimals, duration, options) {
 		}
 	};
 
+	// Print value to target
+	self.printValue = function(value) {
+		var result = self.options.formattingFn(value);
+
+		if (self.d.tagName === 'INPUT') {
+			this.d.value = result;
+		}
+		else if (self.d.tagName === 'text' || self.d.tagName === 'tspan') {
+			this.d.textContent = result;
+		}
+		else {
+			this.d.innerHTML = result;
+		}
+	};
 
 	self.count = function(timestamp) {
 
@@ -177,6 +191,53 @@ var CountUp = function(target, startVal, endVal, decimals, duration, options) {
 		} else {
 			if (self.callback) self.callback();
 		}
+	};
+	// start your animation
+	self.start = function(callback) {
+		if (!self.initialize()) return;
+		self.callback = callback;
+		self.rAF = requestAnimationFrame(self.count);
+	};
+	// toggles pause/resume animation
+	self.pauseResume = function() {
+		if (!self.paused) {
+			self.paused = true;
+			cancelAnimationFrame(self.rAF);
+		} else {
+			self.paused = false;
+			delete self.startTime;
+			self.duration = self.remaining;
+			self.startVal = self.frameVal;
+			requestAnimationFrame(self.count);
+		}
+	};
+	// reset to startVal so animation can be run again
+	self.reset = function() {
+		self.paused = false;
+		delete self.startTime;
+		self.initialized = false;
+		if (self.initialize()) {
+			cancelAnimationFrame(self.rAF);
+			self.printValue(self.startVal);
+		}
+	};
+	// pass a new endVal and start animation
+	self.update = function (newEndVal) {
+		if (!self.initialize()) return;
+		newEndVal = Number(newEndVal);
+		if (!ensureNumber(newEndVal)) {
+			self.error = '[CountUp] update() - new endVal is not a number: '+newEndVal;
+			return;
+		}
+		self.error = '';
+		if (newEndVal === self.frameVal) return;
+		cancelAnimationFrame(self.rAF);
+		self.paused = false;
+		delete self.startTime;
+		self.startVal = self.frameVal;
+		self.endVal = newEndVal;
+		self.countDown = (self.startVal > self.endVal);
+		self.rAF = requestAnimationFrame(self.count);
 	};
 
 	// format startVal on initialization
