@@ -1,0 +1,355 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.owl-carousel,
+.owl-carousel .owl-item {
+  -webkit-tap-highlight-color: transparent;
+  position: relative;
+}
+.owl-carousel {
+  display: none;
+  width: 100%;
+  z-index: 1;
+}
+.owl-carousel .owl-stage {
+  position: relative;
+  -ms-touch-action: pan-Y;
+  -moz-backface-visibility: hidden;
+}
+.owl-carousel .owl-stage:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+.owl-carousel .owl-stage-outer {
+  position: relative;
+  overflow: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+}
+.owl-carousel .owl-item,
+.owl-carousel .owl-wrapper {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+}
+.owl-carousel .owl-item {
+  min-height: 1px;
+  float: left;
+  -webkit-backface-visibility: hidden;
+  -webkit-touch-callout: none;
+}
+.owl-carousel .owl-item img {
+  display: block;
+  width: 100%;
+}
+.owl-carousel .owl-dots.disabled,
+.owl-carousel .owl-nav.disabled {
+  display: none;
+}
+.no-js .owl-carousel,
+.owl-carousel.owl-loaded {
+  display: block;
+}
+.owl-carousel .owl-dot,
+.owl-carousel .owl-nav .owl-next,
+.owl-carousel .owl-nav .owl-prev {
+  cursor: pointer;
+  cursor: hand;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.owl-carousel.owl-loading {
+  opacity: 0;
+  display: block;
+}
+.owl-carousel.owl-hidden {
+  opacity: 0;
+}
+.owl-carousel.owl-refresh .owl-item {
+  visibility: hidden;
+}
+.owl-carousel.owl-drag .owl-item {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.owl-carousel.owl-rtl {
+  direction: rtl;
+}
+.owl-carousel.owl-rtl .owl-item {
+  float: right;
+}
+.owl-carousel .animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+.owl-carousel .owl-animated-in {
+  z-index: 0;
+}
+.owl-carousel .owl-animated-out {
+  z-index: 1;
+}
+.owl-carousel {
+  animation-name: fadeOut;
+}
+.owl-theme .owl-nav {
+  opacity: 0.5;
+  cursor: default;
+}
+.owl-theme .owl-nav.disabled + .owl-dots {
+  margin-top: 10px;
+}
+.owl-theme .owl-dots .owl-dot {
+  display: inline-block;
+  zoom: 1;
+}
+.owl-theme .owl-dots .owl-dot span {
+  width: 10px;
+  height: 10px;
+  margin: 5px 7px;
+  background: #d6d6d6;
+  display: block;
+  -webkit-backface-visibility: visible;
+  transition: opacity 0.2s ease;
+  border-radius: 30px;
+}
+
+.wrap {
+  margin: 0 auto;
+  width: 96%;
+}
+#timeline-container {
+  background-color: #fff;
+}
+#timeline-container #timeline {
+  margin-top: 20px;
+}
+#timeline-container #timeline .owl-dots {
+  display: inline-block;
+  padding: 0;
+  margin: 0 auto 20px auto;
+  width: 100%;
+  max-width: 860px;
+}
+#timeline-container #timeline .owl-dots .owl-dot {
+  display: inline-block;
+  margin: 0 5px;
+}
+#timeline-container #timeline .owl-dots .owl-dot i {
+  background-color: #fff;
+  border: 2px solid #231f20;
+  border-radius: 50%;
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+}
+#timeline-container #timeline .owl-dots .owl-dot span {
+  display: none;
+}
+#timeline-container #timeline .owl-dots .owl-dot.active i {
+  background-color: #231f20;
+}
+#timeline-container #timeline p {
+  max-width: 100%;
+}
+
+@media (min-width: 768px) {
+  .owl-item {
+    width: 700px;
+  }
+}
+@media (min-width: 1024px) {
+  .owl-item {
+    width: 800px;
+  }
+}
+.owl-item.active.center {
+  opacity: 1;
+}
+.owl-item.active.center {
+  opacity: 1;
+  visibility: visible;
+}
+.center-text {
+  position: relative;
+  top: 50%;
+  transform: perspective(1px) translateY(-50%);
+}
+.text-center {
+  text-align: center;
+}
+.text-block {
+  padding: 40px;
+}
+.text-block .wrap {
+  z-index: 2;
+  position: relative;
+}
+.text-block .intro {
+  font-size: 1.4em;
+  line-height: 1.5;
+}
+.text-block h2 {
+  font-size: 2.1em;
+  margin: 0 0 20px 0;
+}
+.text-block p {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media only screen and (min-width: 768px) {
+  .wrap {
+    width: 760px;
+    max-width: 100%;
+  }
+  p {
+    font-size: 1.35em;
+  }
+  #timeline-container {
+    background-color: #fff;
+  }
+  #timeline-container #timeline #how-we-work-timeline {
+    padding-top: 150px;
+    position: relative;
+  }
+  #timeline-container #timeline #how-we-work-timeline .wrap {
+    width: 100%;
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #timeline-container #timeline #how-we-work-timeline .owl-item p {
+    font-size: 1.35em;
+    margin-top: 0;
+  }
+  #timeline-container #timeline #how-we-work-timeline .owl-dots {
+    position: absolute;
+    top: 55px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-block;
+    padding: 0;
+    margin: 0 auto 20px auto;
+    width: 100%;
+    max-width: 900px;
+  }
+  #timeline-container #timeline #how-we-work-timeline .owl-dots .owl-dot {
+    float: left;
+    width: 20%;
+    position: relative;
+    display: block;
+    margin: 0;
+  }
+  #timeline-container
+    #timeline
+    #how-we-work-timeline
+    .owl-dots
+    .owl-dot:before {
+    right: 50%;
+  }
+  #timeline-container #timeline #how-we-work-timeline .owl-dots .owl-dot:before,
+  #timeline-container #timeline #how-we-work-timeline .owl-dots .owl-dot:after {
+    content: "";
+    background-color: #231f20;
+    width: 80%;
+    height: 2px;
+    position: absolute;
+    top: 0;
+  }
+  #timeline-container #timeline #how-we-work-timeline .owl-dots .owl-dot:after {
+    left: 50%;
+  }
+  #timeline-container
+    #timeline
+    #how-we-work-timeline
+    .owl-dots
+    .owl-dot:first-child:before {
+    display: none;
+  }
+  #timeline-container
+    #timeline
+    #how-we-work-timeline
+    .owl-dots
+    .owl-dot:last-child:after {
+    display: none;
+  }
+  #timeline-container #timeline #how-we-work-timeline .owl-dots .owl-dot i {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+  }
+  #timeline-container #timeline #how-we-work-timeline .owl-dots .owl-dot span {
+    text-transform: uppercase;
+    font-family: "AvenirLTStd-Black", "Nunito Sans", -apple-system,
+      BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+    margin-top: 20px;
+    display: block;
+  }
+  #timeline-container
+    #timeline
+    #how-we-work-timeline
+    .owl-dots
+    .owl-dot.active
+    i {
+    background-color: #231f20;
+  } 
+}
+@media only screen and (min-width: 768px) {
+  .text-block {
+    padding: 80px;
+  }
+  .text-block.half-pad {
+    padding: 40px;
+  }
+  .text-block .intro {
+    font-size: 1.5em;
+    line-height: 2;
+  }
+  .text-block p {
+    max-width: 830px;
+  }
+  .text-block p.wide {
+    max-width: 1140px;
+  }
+  .text-block p.full {
+    max-width: 100%;
+  }
+}
+@media only screen and (min-width: 1030px) {
+  .wrap {
+    width: 96%;
+    max-width: 1366px;
+  }
+}
+@media print {
+  * {
+    background: transparent !important;
+    color: black !important;
+    text-shadow: none !important;
+    filter: none !important;
+    -ms-filter: none !important;
+  }
+  @page {
+    margin: 0.5cm;
+  }
+  p{
+    orphans: 3;
+    widows: 3;
+  }
+}
