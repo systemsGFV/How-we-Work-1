@@ -353,3 +353,27 @@
     widows: 3;
   }
 }
+
+
+.owl-stage-outer {
+  cursor: url("../../../themes/assembly-2.0/library/images/cursor-swipe.png") 0
+      0,
+    ew-resize;
+  cursor: url("../../../themes/assembly-2.0/library/images/cursor-swipe.svg") 0
+      0,
+    ew-resize;
+  cursor: -webkit-image-set(
+        url("../../../themes/assembly-2.0/library/images/cursor-swipe.png") 1x,
+        url("../../../themes/assembly-2.0/library/images/cursor-swipe-2x.png")
+          2x
+      )
+      0 0,
+    ew-resize;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
