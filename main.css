@@ -356,15 +356,15 @@
 
 
 .owl-stage-outer {
-  cursor: url("../../../themes/assembly-2.0/library/images/cursor-swipe.png") 0
+  cursor: url("./cursor-swipe.png") 0
       0,
     ew-resize;
-  cursor: url("../../../themes/assembly-2.0/library/images/cursor-swipe.svg") 0
+  cursor: url("./cursor-swipe.svg") 0
       0,
     ew-resize;
   cursor: -webkit-image-set(
-        url("../../../themes/assembly-2.0/library/images/cursor-swipe.png") 1x,
-        url("../../../themes/assembly-2.0/library/images/cursor-swipe-2x.png")
+        url("./cursor-swipe.png") 1x,
+        url("./cursor-swipe-2x.png")
           2x
       )
       0 0,
