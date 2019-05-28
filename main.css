@@ -356,15 +356,15 @@
 
 
 .owl-stage-outer {
-  cursor: url("./cursor-swipe.png") 0
+  cursor: url("https://uploads-ssl.webflow.com/5ccf407515eeac052cf3086b/5ced8ffbaee6e4e5099b71d1_cursor-swipe.png") 0
       0,
     ew-resize;
-  cursor: url("./cursor-swipe.svg") 0
+  cursor: url("https://uploads-ssl.webflow.com/5ccf407515eeac052cf3086b/5ced9006991f098c8f5598cd_cursor-swipe.svg") 0
       0,
     ew-resize;
   cursor: -webkit-image-set(
-        url("./cursor-swipe.png") 1x,
-        url("./cursor-swipe-2x.png")
+        url("https://uploads-ssl.webflow.com/5ccf407515eeac052cf3086b/5ced8ffbaee6e4e5099b71d1_cursor-swipe.png") 1x,
+        url("https://uploads-ssl.webflow.com/5ccf407515eeac052cf3086b/5ced9001c0e8fa0bf09ce02c_cursor-swipe-2x.png")
           2x
       )
       0 0,
