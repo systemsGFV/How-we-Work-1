@@ -131,7 +131,7 @@
   width: 96%;
 }
 #timeline-container {
-  background-color: #fff;
+  background-color: rgba(0,0,0,0.0);
 }
 #timeline-container #timeline {
   margin-top: 20px;
@@ -148,7 +148,7 @@
   margin: 0 5px;
 }
 #timeline-container #timeline .owl-dots .owl-dot i {
-  background-color: #fff;
+  background-color: rgba(0,0,0,0.0);
   border: 2px solid #231f20;
   border-radius: 50%;
   width: 14px;
@@ -220,7 +220,7 @@
     font-size: 1.35em;
   }
   #timeline-container {
-    background-color: #fff;
+    background-color: rgba(0,0,0,0.0);
   }
   #timeline-container #timeline #how-we-work-timeline {
     padding-top: 150px;
